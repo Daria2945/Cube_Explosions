@@ -1,17 +1,19 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Exploder))]
+[RequireComponent(typeof(Cloner))]
+[RequireComponent(typeof(Rigidbody))]
 public class UserInput : MonoBehaviour
 {
     private Exploder _exploder;
     private Cloner _cloner;
-    private Rigidbody _obgect;
+    private Rigidbody _selectedObgect;
 
     private void Start()
     {
         _cloner = GetComponent<Cloner>();
         _exploder = GetComponent<Exploder>();
-        _obgect = GetComponent<Rigidbody>();
+        _selectedObgect = GetComponent<Rigidbody>();
     }
 
     private void OnMouseUpAsButton()
@@ -23,7 +25,7 @@ public class UserInput : MonoBehaviour
         }
         else
         {
-            Destroy(_obgect.gameObject);
+            Destroy(_selectedObgect.gameObject);
         }
     }
 }

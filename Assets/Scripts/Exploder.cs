@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Cloner))]
+[RequireComponent(typeof(Rigidbody))]
 public class Exploder : MonoBehaviour
 {
     private Rigidbody _objectToExplode;
